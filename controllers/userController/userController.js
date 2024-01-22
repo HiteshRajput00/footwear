@@ -10,26 +10,26 @@ exports.ProductDetails = async(req,res) => {
     res.render('front/shop/product_details');
 }
 
-exports.aboutPage = (req,res) => {
+exports.aboutPage = async(req,res) => {
     res.render('front/sitepages/about_us');
 }
 
-exports.contactPage = (req,res) => {
+exports.contactPage = async(req,res) => {
     res.render('front/sitepages/contact_us');
 }
 
-exports.wishlist = (req,res) => {
+exports.wishlist = async(req,res) => {
     res.render('front/wishlist/index');
 }
 
-exports.cartPage = (req,res) => {
+exports.cartPage = async(req,res) => {
     res.render('front/cart/index');
 }
 
-exports.checkout = (req,res) => {
+exports.checkout = async(req,res) => {
     res.render('front/checkout/checkout');
 }
 
-exports.orderComplete = (req,res) => {
+exports.orderComplete = async(req,res) => {
     res.render('front/checkout/order_complete');
 }

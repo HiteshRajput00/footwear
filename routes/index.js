@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const userController = require('../controllers/userController/userController');
+const AuthController = require('../controllers/Authentication/AuthController');
 const { resolveInclude } = require('ejs');
 
 /* GET home page. */
@@ -18,5 +19,10 @@ router.get('/wishlist',userController.wishlist);
 router.get('/cart',userController.cartPage);
 router.get('/checkout',userController.checkout);
 router.get('/order-complete',userController.orderComplete);
+
+// authentication Routes //
+router.get('/register',AuthController.registerPage);
+router.post('/register-process',AuthController.registerProcess);
+
 
 module.exports = router;
